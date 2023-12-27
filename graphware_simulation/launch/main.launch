@@ -1,0 +1,87 @@
+<launch>
+
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/empty.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <group ns="robot1">
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtlebot3_description)/urdf/turtlebot3_waffle_pi.urdf.xacro'" />  
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model tb1 -x 0 -y 0 -z 0 -Y 0.70 -param robot_description" />
+  </group>
+
+
+  
+
+
+  <include file="$(find graphware_simulation)/launch/ball.launch">
+    <arg name="name" value="ball1"/>
+    <arg name="colour" value="yellow"/>
+    <arg name="x_pos" value="8"/>
+    <arg name="y_pos" value="8"/>
+  </include>
+
+  <include file="$(find graphware_simulation)/launch/ball.launch">
+    <arg name="name" value="ball2"/>
+    <arg name="colour" value="yellow"/>
+    <arg name="x_pos" value="5.5"/>
+    <arg name="y_pos" value="7.5"/>
+  </include>
+
+  <include file="$(find graphware_simulation)/launch/ball.launch">
+    <arg name="name" value="ball3"/>
+    <arg name="colour" value="yellow"/>
+    <arg name="x_pos" value="7.8"/>
+    <arg name="y_pos" value="5.3"/>
+  </include>
+
+  <include file="$(find graphware_simulation)/launch/ball.launch">
+    <arg name="name" value="ball4"/>
+    <arg name="colour" value="black"/>
+    <arg name="x_pos" value="5"/>
+    <arg name="y_pos" value="5"/>
+  </include>
+
+  <include file="$(find graphware_simulation)/launch/ball.launch">
+    <arg name="name" value="ball6"/>
+    <arg name="colour" value="red"/>
+    <arg name="x_pos" value="2"/>
+    <arg name="y_pos" value="4.2"/>
+  </include>
+
+  <include file="$(find graphware_simulation)/launch/ball.launch">
+    <arg name="name" value="ball7"/>
+    <arg name="colour" value="red"/>
+    <arg name="x_pos" value="4"/>
+    <arg name="y_pos" value="2.5"/>
+  </include>
+
+  <include file="$(find graphware_simulation)/launch/ball.launch">
+    <arg name="name" value="ball8"/>
+    <arg name="colour" value="red"/>
+    <arg name="x_pos" value="1.7"/>
+    <arg name="y_pos" value="1.7"/>
+  </include>
+
+  <include file="$(find graphware_simulation)/launch/ball.launch">
+    <arg name="name" value="ball9"/>
+    <arg name="colour" value="black"/>
+    <arg name="x_pos" value="2.7"/>
+    <arg name="y_pos" value="6"/>
+  </include>
+
+  <include file="$(find graphware_simulation)/launch/ball.launch">
+    <arg name="name" value="ball10"/>
+    <arg name="colour" value="black"/>
+    <arg name="x_pos" value="6.2"/>
+    <arg name="y_pos" value="3"/>
+  </include>
+
+
+
+</launch>

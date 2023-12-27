@@ -1,0 +1,6 @@
+*.csv
+*/*.csv
+*.tar
+*.lp
+circle*
+group/*
