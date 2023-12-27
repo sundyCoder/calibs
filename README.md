@@ -1,16 +1,20 @@
-# Tfresh
+# A library for collision avoidance
+We provide the collision avoidance algorithms like: NH-ORCA, RL-RVO, Heter-CA, TFresh, UTTC, QCQP etc. These algorithms can be executed in the simulation platform with different scenarios, such as circle scenarios, group swap, group crossing, and warehouse scenarios.
 
+![Scenarios](docs/ca_scenarios.png)
+## How to launch the specific scenarios
 
-## How to launch the environment
-
-    export PYTHONPATH=/home/jlchen/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages
+    export PYTHONPATH=~/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages
     
-    roslaunch scenaro/circle_6r_3t.launch
+    roslaunch scenaro/circle_6r_3t.launch  # roslaunch [launch file]
     
-## How to run the training script
+## How to run the training script  (RL)
 
-    export PYTHONPATH=/home/jlchen/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages
+    export PYTHONPATH=~/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages
     
-    mpiexec -n 8 python2 train.py 
+    mpiexec -n 8 python2 train.py    
 
+## How to execute the collision avoidance algorithm
+    cd [algorithm folder]
+    sh run_xxx.sh
 
