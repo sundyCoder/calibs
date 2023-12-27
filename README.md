@@ -1,7 +1,10 @@
 # A library for collision avoidance
 We provide the collision avoidance algorithms like: NH-ORCA, RL-RVO, Heter-CA, TFresh, UTTC, QCQP etc. These algorithms can be executed in the simulation platform with different scenarios, such as circle scenarios, group swap, group crossing, and warehouse scenarios.
 
-![Scenarios](docs/ca_scenarios.png)
+<div align="center">
+  <img src="docs/ca_scenarios.png">  
+</div>
+
 ## How to launch the specific scenarios
 
     export PYTHONPATH=~/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages
